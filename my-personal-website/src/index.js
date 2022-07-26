@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
+import { LikesContextProvider } from './context/LikeContext';
+
+
 import { Blog } from './components/pages/blog.js'
 import { User } from './components/pages/user.js'
 import NotFound from './components/pages/not-found';
@@ -14,18 +17,20 @@ import UserDetails from './components/data/user-details';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-        <Route path='/my-personal-website' element={<App />} >
-            <Route path='home' element={<Home />}/>
-            <Route path='blog'  element={<Blog />} />
+    <LikesContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/my-personal-website' element={<App />} >
+            <Route path='home' element={<Home />} />
+            <Route path='blog' element={<Blog />} />
             <Route path='user' element={<User />}>
-              <Route path=':userId' element={<UserDetails/>}/>
+              <Route path=':userId' element={<UserDetails />} />
             </Route>
-            <Route path='*' element={<NotFound />}/>
-        </Route>
-    </Routes>
-    </BrowserRouter>
+            <Route path='*' element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </LikesContextProvider>
   </React.StrictMode>
 );
 

@@ -3,9 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
-
+import { BsHeart } from 'react-icons/bs'
+import { useContext } from 'react';
+import LikeContext from '../context/LikeContext';
 
 const Menu=()=> {
+  const contextData=useContext(LikeContext);
+
   return (
 
    <div className='mb-5'> 
@@ -32,6 +36,10 @@ const Menu=()=> {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <Navbar.Text>
+          {/* To do add count */}
+          <BsHeart/> {contextData.likeCount}
+        </Navbar.Text>
       </Container>
     </Navbar>
     

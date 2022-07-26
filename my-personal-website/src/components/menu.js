@@ -11,13 +11,13 @@ const Menu=()=> {
    <div className='mb-5'> 
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand to="/abc/home" as={Link}>My Personal Website</Navbar.Brand>
+        <Navbar.Brand to="/my-personal-website/home" as={Link}>My Personal Website</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/abc/home">Home</Nav.Link>
-            <Nav.Link as={Link} to="/abc/blog">Blog</Nav.Link>
-            <Nav.Link as={Link} to="/abc/user">User</Nav.Link>
+            <Nav.Link as={Link} to="/my-personal-website/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/my-personal-website/blog">Blog</Nav.Link>
+            <Nav.Link as={Link} to="/my-personal-website/user">User</Nav.Link>
 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item target="_blank" href='https://www.youtube.com/watch?v=3AtDnEC4zak'>Action</NavDropdown.Item>

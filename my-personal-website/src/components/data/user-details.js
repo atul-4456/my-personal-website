@@ -1,11 +1,11 @@
 import users from "./user-data";
-import { useParams,useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
 
 const UserDetails=()=>{
     const params=useParams();
-    const [searchParam,setSearchParam]=useSearchParams();
+    // const [searchParam,setSearchParam]=useSearchParams();
     const {userId} =params;
 
 
